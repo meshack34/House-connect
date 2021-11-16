@@ -1,10 +1,11 @@
-from flask import Blueprint, app
+from flask import Blueprint, render_template
 
 views = Blueprint('views',__name__)
-
+ 
+@views.route('/')
+def home():
+    return render_template("home.html")
 
 from .views import views
 from .auth import auth
 
-app.register_blueprint(views,)
-app.register_blueprint(views)
