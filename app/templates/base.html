@@ -9,25 +9,149 @@
     <title>{% block title %}Home {% endlock %}</title>
 </head>
 <body>
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
-           <span class="navbar-icon">
+    <nav class="navbar navbar-expand-lg navbar-blue bg-dark">
+        <div class="container-fluid">
+            <img style="height: 8%; width: 6%;" src="/app/static/istockphoto-1162985114-612x612.jpg">
+          <!-- <a class="navbar-brand" href="#">Home</a> -->
+          <button class="navbar-toggler" type="button" 
+          data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a> -->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">About</a></li>
+                  <li><a class="dropdown-item" href="#">contact</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">logout</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a> -->
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      
+   <style type="text/css">
+    .navbar {
+    background-color: transparent;
+    padding: .5em 0 2em;
+    margin-left: 60px;
+    margin-right: 45px;
+    border-radius: .3em;
+    text-align: right;
+    justify-content:space-between;
+    font-family: "Droid Serif", "DejaVu Serif", "STIX", serif
+    }
+    .container{
+            background-image:url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/brewster-mcleod-architects-1486154143.jpg?crop=1.00xw:1.00xh;0,0&resize=480:*");
+            background-color: #cccccc;
+            height: 500px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            opacity: 0.5;
+            }
+            h1{
+                text-align: center;
+                padding: 60px;
+                /* margin-top: 10px; */
+            }
+            p{
+                text-align: center;
+            }
+            .bt{
+                text-align: center;
+            }
+            .circle {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  background: #fff;
+  border: 3px solid #000;
+  color: #000;
+  text-align: center;
+  align-items: center;
+  font: 32px Arial, sans-serif;
+}
+.container2{
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+}
 
-           </span>
-       </button>
-       <div class="collapse navbar-collapse" id="navbar">
-           <div class="navbar-nav">
-            <a class="nav-item nav-link" id="login"  href="/login">login</a>
-            <a class="nav-item nav-link" id="login"  href="/home">Home</a>  
-            <a class="nav-item nav-link" id="login"  href="/signup">sign up</a>  
-            <a class="nav-item nav-link" id="login"  href="/logout">logout</a>  
-           </div>
-       </div>
-   </nav>
+</style>
    <div class="container">
-       {% block content %}
-       {% end block %}
+       <h1>Welcome to Housing Connect</h1>
+       <p>House Connect is your portal to find and apply for affordable rentals, <br>
+        and homeownership opportunities in Nairobi City.</p>
+        <div class="bt">
+        <button type="button" class="btn btn-primary">Get started</button>
+
+    <button type="button" class="btn btn-primary">Login</button>
+</div>
+        
    </div>
+   <div class="container2">
+       
+       <h2>How does House Connect work?</h2>
+       <p>Through Housing Connect, you can find and apply for affordable rental and homeownership opportunities.<br>
+         To qualify, your household must meet the household income and size requirements for a unit in the affordable development.</p>
+        <div class="bt2">
+         <div class="circle">
+             1 
+             </div>
+             <h2>Complete your profile</h2>
+             <h5>Remember to update your profile <br>
+                each time your income or <br>
+                household information changes.</h5>
+            </div>
+            <div class="bt3">
+                <div class="circle">
+                    2 
+                    </div>
+                    <h2>Check our profile</h2>
+                    <h5>Remember to update your profile <br>
+                       each time your income or <br>
+                       household information changes.</h5>
+                   </div>
+                   <div class="bt4">
+                    <div class="circle">
+                        3 
+                        </div>
+                        <h2>Sign a lease or complete a purchase</h2>
+                        <h5>If you are matched to a specific unit,<br>
+                             you may sign a lease or complete purchase.</h5>
+                       </div>
+                       <div class="bt4">
+                        <div class="circle">
+                            4
+                            </div>
+                            <h2>Selection</h2>
+                            <h5>Check often for new developments that fit your household.<br>
+                                 It may take several months for applications to be processed.<br>
+                                 You may apply to multiple different lotteries at once..</h5>
+                           </div>
+   </div>
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
     crossorigin="anonymous"></script>
