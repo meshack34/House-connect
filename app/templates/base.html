@@ -5,7 +5,8 @@
     <title>{% block title %}
 
     {% endblock %}</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="{% static 'css.css' %}">
 
 </head>
@@ -50,25 +51,15 @@
       </nav>
       
    <style type="text/css">
-    .navbar {
-    background-color: transparent;
-    padding: .5em 0 2em;
-    margin-left: 60px;
-    margin-right: 45px;
-    border-radius: .3em;
-    text-align: right;
-    justify-content:space-between;
-    font-family: "Droid Serif", "DejaVu Serif", "STIX", serif
-    }
-    .container{
+    .container4{
             background-image:url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/brewster-mcleod-architects-1486154143.jpg?crop=1.00xw:1.00xh;0,0&resize=480:*");
             background-color: #cccccc;
             height: 500px;
-            background-position: center;
+            background-position: static;
             background-repeat: no-repeat;
             background-size: cover;
             position: relative;
-            opacity: 0.5;
+            /* opacity: 0.8; */
             }
             h1{
                 text-align: center;
@@ -86,22 +77,48 @@
   width: 60px;
   height: 60px;
   padding: 10px;
+  margin-left:auto 50px ;
   background: #fff;
   border: 3px solid #000;
   color: #000;
   text-align: center;
   align-items: center;
+  margin-top: 10%;
   font: 32px Arial, sans-serif;
 }
 .circles{
     display: flex;
     flex-direction: row;
     margin: 50px;
+    align-items: center;
+  
 }
+.container2{
+  text-align: center;
+  margin-top: 60px;
+}
+  .container5{
+    height: 10%;
+    width: 80%;
+    align-items: center;
+    margin-left: 10%;
+    margin-bottom: 15%;
+    margin-top: 10%;
+    color: #000;
+    /* margin-right: 20%; */
+     
+  }
+  .d-block{
+    height: 10%;
+    width:100%;
+  }
+  img{
+    opacity: 0.8;
+  }
 
 </style>
-   <div class="container">
-       <h1>Welcome to Housing Connect</h1>
+   <div class="container4">
+       <h1>Welcome to House Connect</h1>
        <p>House Connect is your portal to find and apply for affordable rentals, <br>
         and homeownership opportunities in Nairobi City.</p>
         <div class="bt">
@@ -150,11 +167,58 @@
                             <h2>Selection</h2>
                             <h5>Check often for new developments that fit your household.<br>
                                  It may take several months for applications to be processed.<br>
-                                 You may apply to multiple different lotteries at once..</h5>
+                                 You may apply to multiple different lotteries at once.</h5>
                            </div>
-                          </div>
+                      
    </div>
+      <div class="container5">
+   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/app/static/images.jpeg" class="d-block w-100 h-50%" alt="stock">
+      <div class="carousel-caption d-none d-md-block ">
+        <h5>brandon hatley</h5>
+        <p><strong> had the pleasure for working with one of Joe's team members Sally Hall.<br>
+           From start to finish she was very responsive,<br>
+           kind, and a constant professional. I look forward to the opportunity to work with her and the Joe Hayden Real Estate Team again.</strong><br></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/app/static/istockphoto-1285783771-170667a.jpg" class="d-block w-100" alt="happy home">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Jackson hacking</h5>
+        <p>We are so lucky that we found Trevor Gill of the Joe Hayden Real Estate Team,<br> 
+          he made buying our first home an enjoyable and easy experience.<br>
+           Quick to respond and will do anything to help, we highly recommend Trevor<br></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/app/static/savanna-Greens-construction-4.jpg" class="d-block w-100" alt="savanna Greens">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>steven stalker</h5>
+        <p>Crystal Dries of the Joe Hayden Real Estate Team is one of the best agents we have ever worked with,<br>
+           she goes beyond any expectation and gets things done.<br>
+            You are very lucky to have her represent your team. Thank you so much, Crystal!!!.<br></p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
    
+  
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"  
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
     crossorigin="anonymous"></script>
@@ -165,3 +229,4 @@
     </script>
 </body>
 </html>
+  
