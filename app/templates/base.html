@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}
-
     {% endblock %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="{% static 'css.css' %}">
 
+    <link rel="stylesheet" href="{% static 'css.css' %}">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-blue bg-dark">
         <div class="container-fluid">
             <img style="height: 8%; width: 6%;" src="/app/static/istockphoto-1162985114-612x612.jpg">
           <!-- <a class="navbar-brand" href="#">Home</a> -->
-          <button class="navbar-toggler" type="button" 
+          <button class="navbar-toggler" type="button"
           data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -32,7 +30,7 @@
                   Dropdown
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="{{url_for('main.about')}}">About</a>
+                  <li><a class="dropdown-item" href="#">About</a></li>
                   <li><a class="dropdown-item" href="#">contact</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">logout</a></li>
@@ -49,11 +47,10 @@
           </div>
         </div>
       </nav>
-      
    <style type="text/css">
     .container4{
-            background-image:url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/brewster-mcleod-architects-1486154143.jpg?crop=1.00xw:1.00xh;0,0&resize=480:*");
-            background-color: #cccccc;
+            background-image:url("/app/static/r-architecture-MAnVoJlQUvg-unsplash.jpg");
+            background-color: #CCCCCC;
             height: 500px;
             background-position: static;
             background-repeat: no-repeat;
@@ -72,42 +69,48 @@
             .bt{
                 text-align: center;
             }
-            .circle {
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  padding: 10px;
-  margin-left:auto 50px ;
-  background: #fff;
-  border: 3px solid #000;
-  color: #000;
-  text-align: center;
-  align-items: center;
-  margin-top: 10%;
-  font: 32px Arial, sans-serif;
+.circle {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    margin-left: 40%;
+    background: #fff;
+    border: 3px solid rgb(44, 43, 43);
+    color: #000;
+    text-align: center;
+    align-items: center;
+    margin-top: 5%;
+    font: 32px Arial, sans-serif;
 }
 .circles{
     display: flex;
     flex-direction: row;
     margin: 50px;
-    align-items: center;
-  
+    align-items: normal;
+    text-align: center;
+    padding: 10px;
 }
 .container2{
+  display: flex;
+  flex-direction: column;
   text-align: center;
   margin-top: 60px;
 }
-  .container5{
-    height: 10%;
+  .container5, .img2{
     width: 80%;
-    align-items: center;
-    margin-left: 10%;
-    margin-bottom: 15%;
-    margin-top: 10%;
-    color: #000;
-    /* margin-right: 20%; */
-     
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(50%); /* make all photos black and white */
+    width: 100%; /* Set width to 100% */
+    margin: auto;
   }
+  .container5, h5, p {
+    color: black !important;
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  
   .d-block{
     height: 10%;
     width:100%;
@@ -115,118 +118,122 @@
   img{
     opacity: 0.8;
   }
-
+  p{
+    color: black;
+  }
+  h5{
+    color: black;
+  }
+  .img2{
+width: 70%;
+  }
 </style>
-   <div class="container4">
-       <h1>Welcome to House Connect</h1>
-       <p>House Connect is your portal to find and apply for affordable rentals, <br>
-        and homeownership opportunities in Nairobi City.</p>
-        <div class="bt">
-        <button type="button" class="btn btn-primary">Get started</button>
-
-    <button type="button" class="btn btn-primary">Login</button>
-</div>
-        
-   </div>
+  <div class="container4">
+    <h1>Welcome to House Connect</h1>
+    <p>House Connect is your portal to find and apply for affordable rentals, <br>
+    and homeownership opportunities in Nairobi City.</p>
+    <div class="bt">
+      <button type="button" class="btn btn-primary">Get started</button>
+      <button type="button" class="btn btn-primary">Login</button>
+    </div>
+  </div>
    <div class="container2">
-       
        <h2>How does House Connect work?</h2>
        <p>Through Housing Connect, you can find and apply for affordable rental and homeownership opportunities.<br>
          To qualify, your household must meet the household income and size requirements for a unit in the affordable development.</p>
         <div class="circles">
-         <div class="bt2">
-         <div class="circle">
-             1 
-             </div>
-             <h2>Complete your profile</h2>
-             <h5>Remember to update your profile <br>
-                each time your income or <br>
-                household information changes.</h5>
+          <div class="bt2">
+            <div class="circle">
+             1
             </div>
-            <div class="bt3">
-                <div class="circle">
-                    2 
-                    </div>
-                    <h2>Check our profile</h2>
-                    <h5>Remember to update your profile <br>
-                       each time your income or <br>
-                       household information changes.</h5>
-                   </div>
-                   <div class="bt4">
-                    <div class="circle">
-                        3 
-                        </div>
-                        <h2>Sign a lease or complete a purchase</h2>
-                        <h5>If you are matched to a specific unit,<br>
-                             you may sign a lease or complete purchase.</h5>
-                       </div>
-                       <div class="bt4">
-                        <div class="circle">
-                            4
-                            </div>
-                            <h2>Selection</h2>
-                            <h5>Check often for new developments that fit your household.<br>
-                                 It may take several months for applications to be processed.<br>
-                                 You may apply to multiple different lotteries at once.</h5>
-                           </div>
-                      
-   </div>
-      <div class="container5">
-   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <div>
+              <h4>Complete your profile</h4>
+              <p>Remember to update your profile each time your income or household information changes.</p>
+            </div>
+          </div>
+          <div class="bt3">
+            <div class="circle">
+              2
+            </div>
+            <div>
+              <h4>Check our profile</h4>
+              <p>Remember to update your profile
+              each time your income or
+              household information changes.</p>
+            </div>
+          </div>
+          <div class="bt4">
+            <div class="circle">
+              3
+            </div>
+            <div>
+              <h4>Sign a lease or complete a purchase</h4>
+              <p>If you are matched to a specific unit,
+              you may sign a lease or complete purchase.</p>
+            </div>
+          </div>
+          <div class="bt4">
+            <div class="circle">
+              4
+            </div>
+            <div>
+              <h4>Selection</h4>
+              <p>Check often for new developments that fit <br>your household.
+              It may take several months for applications to be processed.
+              You may apply to multiple different lotteries at once.</p>
+            </div>
+          </div>
+        </div>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/app/static/images.jpeg" class="d-block w-100 h-50%" alt="stock">
-      <div class="carousel-caption d-none d-md-block ">
-        <h5>brandon hatley</h5>
-        <p><strong> had the pleasure for working with one of Joe's team members Sally Hall.<br>
-           From start to finish she was very responsive,<br>
-           kind, and a constant professional. I look forward to the opportunity to work with her and the Joe Hayden Real Estate Team again.</strong><br></p>
+  <div class="container5">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
-    </div>
-    <div class="carousel-item">
-      <img src="/app/static/istockphoto-1285783771-170667a.jpg" class="d-block w-100" alt="happy home">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Jackson hacking</h5>
-        <p>We are so lucky that we found Trevor Gill of the Joe Hayden Real Estate Team,<br> 
-          he made buying our first home an enjoyable and easy experience.<br>
-           Quick to respond and will do anything to help, we highly recommend Trevor<br></p>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="img2" src="/app/static/homeschooling.jpg" class="d-block w-100 h-50%" alt="stock">
+          <div class="carousel-caption d-none d-md-block ">
+            <h5>Brandon Hatley</h5>
+            <p><strong>I had the pleasure for working with one of your team members.
+            From start to finish she was very responsive, kind, and a constant professional. I look forward to the opportunity to work with your company.</strong><br></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="img2" src="/app/static/1_0JDsCH92l7TbuEc5p4twbw.jpeg" class="img2" alt="happy home">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Jackson Hacking</h5>
+            <p><strong><strong>Am so lucky that I found House hunt Real Estate Team,they made buying our first home an enjoyable and easy experience.
+            Quick to respond and will do anything to help, we highly recommend you try them<br></strong></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="img2" src="/app/static/150717181134-black-fathers.jpg" class="img2" alt="savanna Greens">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Steven Stalker</h5>
+            <p><strong>Your company is one of the best agents we have ever worked with,
+            you go beyond any expectation and gets things done. We are very lucky to have your team working with us. Thank you so much!!!.<br></strong></p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="carousel-item">
-      <img src="/app/static/savanna-Greens-construction-4.jpg" class="d-block w-100" alt="savanna Greens">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>steven stalker</h5>
-        <p>Crystal Dries of the Joe Hayden Real Estate Team is one of the best agents we have ever worked with,<br>
-           she goes beyond any expectation and gets things done.<br>
-            You are very lucky to have her represent your team. Thank you so much, Crystal!!!.<br></p>
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-</div>
-   
-  
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"  
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
     <script>
         type = "text/javascript"
         src = "{{ url_for('static', filename = 'index.js') }}"
-
     </script>
 </body>
 </html>
-  
