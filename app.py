@@ -94,8 +94,8 @@ def test():
     
     return render_template('base.html')
 
-@app.route('/about1', methods=['GET'])
-def about1():
+@app.route('/about', methods=['GET'])
+def about():
     
     return render_template('about.html')
 
