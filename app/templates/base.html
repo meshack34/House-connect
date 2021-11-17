@@ -25,17 +25,17 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a> -->
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">About</a></li>
+                  <li><a href="{{ url_for('about') }}">About</a></li>
                   <li><a class="dropdown-item" href="#">contact</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">logout</a></li>
+                  <li><a href="{{ url_for('logout') }}">Log out</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -112,6 +112,8 @@
     .carousel-caption {
       display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
+  }
+}
   
   .d-block{
     height: 10%;
@@ -268,7 +270,7 @@ width: 70%;
           </li>
           <li>
             <p>
-              <a href="#!">ABOUT US</a>
+              <li><a href="{{ url_for('about') }}">About</a></li>
             </p>
           </li>
           <li>

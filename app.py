@@ -39,7 +39,7 @@ class RegisterForm(FlaskForm):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('base.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -87,7 +87,20 @@ def dashboard():
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('index'))
+    return redirect(url_for('test'))
+
+@app.route('/test', methods=['GET'])
+def test():
+    
+    return render_template('base.html')
+
+@app.route('/about1', methods=['GET'])
+def about1():
+    
+    return render_template('about.html')
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
