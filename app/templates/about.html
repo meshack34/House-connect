@@ -1,0 +1,130 @@
+{% extends 'base.html'%}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+<!-- Styles block -->
+{% block styles%}
+ {{ super() }}
+ 
+  <link rel="stylesheet" href="{{url_for('static',filename='css/about.css')}}"/>
+{% endblock %}
+
+{% block content %}
+
+
+ 
+   <!-- == About Us Section === -->
+ 
+         <div class="row">
+
+          
+           <div class=" col-lg-4" id="pic1">
+            <img src="../static/images/IMG_20210829_074806_5CS.jpg"> 
+          
+    
+           </div>
+          <div class="col-lg-8" id="pic2">
+           <div class="section-title mt-4">
+                 
+
+
+              <div class="icon-box">
+                 <i class="fas fa-address-card"></i>
+                 <h2 class="title"><a href="">About House Connect</a></h2>
+                 <h3>  What is affordable housing?</h3>
+                 <p class="description"> 
+              Housing is considered affordable if it costs about one-third or less of what the people living there get in income.
+              The Housing Preservation and Development (HPD) and Housing Development Corporation (HDC) 
+              create affordable housing opportunities for many household income levels and sizes. 
+              The buildings are privately owned. HPD and HDC have a monitoring and oversight role.
+              There are rental and homeownership opportunities. Rentals are regulated 
+              so the rent can’t go up too much over time.Condos, coops, and 1-4 family homes have restricted prices.<br>
+               <a href="https://www.elledecor.com/design-decorate/g8674077/modern-houses/" class="btn btn-warning float-right mt-2 mb-2">Read More »</a>
+              </div>
+
+              <div class="icon-box">
+                 <i class="fas fa-address-card"></i>
+                 <h2 class="title"><a href="">Thinking about applying? Here's how to prepare:</a></h2>
+                 <h3> Know your credit and rental history</h3>
+                 <p class="description"> 
+              If you apply for an affordable rental, and are reached for an eligibility review, you may be asked to undergo a credit check. You can also choose to provide proof of positive rental history instead of a credit check.
+              To prepare for a credit check, make sure the information in your credit report is correct. 
+              You can get help understanding your credit report and learn how to improve it from a free, professional financial counselor. Go to nyc.gov/ready-to-rent for more information, or call 311 and ask for “Ready to Rent.” You can also go to nyc.gov/consumers for more information, 
+              or call 311 and ask to make an appointment at an NYC Financial Empowerment Center.
+              If you prefer to provide proof of 12 months' positive rental history in place of the credit check, prepare by collecting information about your current apartment, such as your current lease and receipts for rent. Go to the “Do I qualify?” section of the FAQ for more details.
+
+
+                  <br>
+               <a href="https://www.elledecor.com/design-decorate/g8674077/modern-houses/" class="btn btn-warning float-right mt-2 mb-2">Read More »</a>
+              </div>
+
+              <div class="icon-box">
+                 <i class="fas fa-address-card"></i>
+                 <h2 class="title"><a href="">How to Apply</a></h2>
+                 <h3>  What is affordable housing?</h3>
+                 <p class="description"> 
+                   <ol type="1">
+                    <li>Go to “register" to see what is available for applications.</li>
+                    <li>It is very important to update your profile information immediately any time your household members or their incomes change. This can be before or after you apply to any specific development.</li>
+                     <li> Are you interested in any of the buildings?</li>
+                     <li>Check the details to see if your household size and income fit the limits for the buildings.</li>
+                     <li>Click “Apply” before the application deadline date.</li>
+                       </ol>
+
+                   
+              <br>
+               <a href="https://www.elledecor.com/design-decorate/g8674077/modern-houses/" class="btn btn-warning float-right mt-2 mb-2">Read More »</a>
+              </div>
+
+
+         
+              
+
+           <div class="wrapper">
+      <h2>TEAM</h2>
+      <div class="faculties">
+        <div class="unit">
+          <img src="https://vidyasheela.com/web-contents/website-components/About-Us-Pages/responsive-about-us-page-html/Director.jpg" alt="">
+          <p>MESHACK, Scrum Master  </p>
+           <p>  Full Stack Developer  </p>
+        </div>
+        <div class="unit">
+          <img src="https://vidyasheela.com/web-contents/website-components/About-Us-Pages/responsive-about-us-page-html/Director.jpg" alt="">
+          <p>Amos, Collaborator  </p>
+           <p>  Full Stack Developer  </p>
+        </div>
+        <div class="unit">
+          <img src="https://vidyasheela.com/web-contents/website-components/About-Us-Pages/responsive-about-us-page-html/Director.jpg" alt="">
+          <p>Larvine Asande, Collaborator </p>
+           <p>  Full Stack Developer  </p>
+        </div>
+          <div class="unit">
+          <img src="https://vidyasheela.com/web-contents/website-components/About-Us-Pages/responsive-about-us-page-html/Director.jpg" alt="">
+          <p>Evans Onyiego,Collaborator </p>
+           <p>  Full Stack Developer  </p>
+        </div>
+           <div class="unit">
+          <img src="https://vidyasheela.com/web-contents/website-components/About-Us-Pages/responsive-about-us-page-html/Director.jpg" alt="">
+          <p>Brian Ndunda , Collaborator </p>
+           <p>  Full Stack Developer  </p>
+        </div>
+      </div>
+    </div>
+
+     </div>  
+     </div>
+
+</div>
+      
+  <!-- End About Us Section -->
+
+
+
+
+   
+ 
+
+
+
+
+
+{% endblock%}
