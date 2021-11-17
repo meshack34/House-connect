@@ -8,6 +8,10 @@ views = Blueprint('views',__name__)
 def home():
     return render_template("home.html")
 
+# @auth.route('/ABOUT US')
+# def about():
+#     return render_template('about.html')
+
 # from .views import views
 # from .auth import auth
 
