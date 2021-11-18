@@ -8,6 +8,22 @@ House-Connect
 {% block styles %}
 {{super()}}
 <link href="https://fonts.googleapis.com/css?family=Akronim|Bellefair|Joti+One" rel="stylesheet">
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="js/jquery-3.6.0.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js" integrity="sha512-cA8gcgtYJ+JYqUe+j2JXl6J3jbamcMQfPe0JOmQGDescd+zqXwwgneDzniOd3k8PcO7EtTW6jA7L4Bhx03SXoA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css" integrity="sha512-BiFZ6oflftBIwm6lYCQtQ5DIRQ6tm02svznor2GYQOfAlT3pnVJ10xCrU3XuXnUrWQ4EG8GKxntXnYEdKY0Ugg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+
 <link rel="stylesheet" href="{{url_for('.static', filename='starter-template.css')}}">
 {% endblock %}
 
@@ -29,15 +45,11 @@ House-Connect
           <ul class="nav navbar-nav">
             <li><a href="{{ url_for('index')}}">Home</a></li>
             <li><a href="{{ url_for('about')}}">About</a></li>
-           
-            <!-- <li><a href="#">Profile</a></li> -->
-            <!-- <li><a href="{{ url_for('login') }}">Login</a></li> -->
-            <!-- <li><a href="{{ url_for('signup') }}">Sign Up</a></li> -->
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
           </ul>
 
           <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
+            <input type="text" class="form-control" placeholder="Enter estate or neighbourhood">
           </form>
         </div><!--/.nav-collapse -->
       </div>
@@ -49,10 +61,12 @@ House-Connect
           <br><br><br><br><br><br>
 
         <h1 style="text-align:center; color:rgb(15, 15, 15)">PRODUCTS</h1>
-        <div id="middlebar" style="color:rgb(0, 162, 255);font-weight: bolder; text-align:center;font-family: 'Joti One'"><br>
+        <div id="middlebar" style="color:rgb(234, 248, 250);font-weight: bolder; text-align:center;font-family: 'Joti One'"><br>
             <div id="middlebar" style="color:rgb(0, 162, 255);font-weight: bolder; text-align:center; "><br>
             <div id="text" style="font-size:larger">
+              <h3>
                 "There is something Permanent and something extremely profound in owning a HOME."<br>
+              </h3>
                  
             </div>   
         </div>
@@ -67,34 +81,139 @@ House-Connect
           <div class="row placeholders">
             <div class="col-xs-6 col-sm-3 placeholder">
                 
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <img src="https://i.pinimg.com/736x/49/c3/a2/49c3a2c7d97ef1abb5d6aec499ccaab5.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
               <h4>One Bedroom</h4>
+              <p style="color: aliceblue;" >
+                <i class="fa fa-bed swing product-icon p-2">1</i>
+                <i class="fa fa-shower swing product-icon p-2">1</i>
+                <i class="fas fa-tape">93 sq m</i>
+              </p>
+              
 
-              <span class="text-muted">Something else</span>
+              <span class="text-muted" style="color: black">Read more</span>
             </div>
             <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <img src="https://i.pinimg.com/originals/e2/63/da/e263daf8d9801e83baaec9cb7e0f980b.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
               <h4>Two Bedroom</h4>
-              <span class="text-muted">Something else</span>
+              <p style="color: aliceblue;" >
+                <i class="fa fa-bed swing product-icon p-2">2</i>
+                <i class="fa fa-shower swing product-icon p-2">1</i>
+                <i class="fas fa-tape">110 sq m</i>
+              </p>
+              
+              <span class="text-muted" style="color: black">Read more</span>
             </div>
+
             <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <img src="https://www.theplancollection.com/Upload/Designers/126/1914/Plan1261914MainImage_16_7_2018_10.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
               <h4>Three Bedroom</h4>
-              <span class="text-muted">Something else</span>
+              <p style="color: aliceblue;" >
+                <i class="fa fa-bed swing product-icon p-2">3</i>
+                <i class="fa fa-shower swing product-icon p-2">3</i>
+                <i class="fas fa-tape">150 sq m</i>
+              </p>
+              
+              <span class="text-muted" style="color: black">Read more</span>
             </div>
+
             <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <img src="https://pbs.twimg.com/media/ElWbEQjXgAAXrUv.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
               <h4>Four Bedroom</h4>
-              <span class="text-muted">Something else</span>
+              <p style="color: aliceblue;">
+                <i class="fa fa-bed swing product-icon p-2">4</i>
+                <i class="fa fa-shower swing product-icon p-2">3</i>
+                <i class="fas fa-tape">250 sq m</i>
+              </p>
+              <span class="text-muted" style="color: black">Read more</span>
             </div>
           </div>
 
-          <h2 class="sub-header">Section title</h2>
-          <div class="table-responsive">
+          <h2 class="sub-header">More</h2>
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+                
+              <img src="https://images.unsplash.com/photo-1546090132-ca96bcb81570?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGFwcGFydG1lbnRzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4 >Hostels</h4>
+              <p style="color: aliceblue;" >
+                <table>
+                  <th>
+                    <p style="color: rgb(7, 7, 7);;">Luxury Hostels</p>
+                  </th>
+                  <td>
+                <i class="fa fa-bed swing product-icon p-2">1</i>
+                <i class="fa fa-shower swing product-icon p-2">1</i>
+                <i class="fas fa-tape">93 sq m</i>
+              </p>
+            </td>
+            </table>
+          </div>
+
+            <div class="col-xs-6 col-sm-3 placeholder">
+            <img src="https://images.unsplash.com/photo-1502462456379-a6dbfdd0faef?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YXBwYXJ0bWVudHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" width="200" height="180" class="img-responsive" alt="Generic placeholder thumbnail">
+            <h4 style="color: aliceblue;">Appartments</h4>
+            <p style="color: aliceblue;" >
+              <table>
+                <th>
+                  <p style="color: rgb(7, 7, 7);">Luxury Appartments</p>
+                </th>
+                <td>
+              <i class="fa fa-bed swing product-icon p-2">4</i>
+              <i class="fa fa-shower swing product-icon p-2">3</i>
+              <i class="fas fa-tape">93 sq m</i>
+            </p>
+          </td>
+          </table>
+        </div>
+
+        <div class="col-xs-6 col-sm-3 placeholder">
+          <img src="https://www.architecturalrecord.com/ext/resources/Issues/2019/04-April/Record-Houses/1904-Gallery-House-Chicago-John-Ronan-Architects-02.jpg?t=1553532534&width=900" width="200" height="180" class="img-responsive" alt="Generic placeholder thumbnail">
+          <h4 style="color: aliceblue;">Appartments</h4>
+          <p style="color: aliceblue;" >
+            <table>
+              <th>
+                <p style="color: rgb(7, 7, 7);">Luxury Appartments</p>
+              </th>
+              <td>
+            <i class="fa fa-bed swing product-icon p-2">4</i>
+            <i class="fa fa-shower swing product-icon p-2">3</i>
+            <i class="fas fa-tape">93 sq m</i>
+          </p>
+        </td>
+        </table>
+      </div>
+
+      <div class="col-xs-6 col-sm-3 placeholder">
+        <img src="https://flats1809.com/wp-content/uploads/Flats-1809-Apartments.jpg" width="200" height="180" class="img-responsive" alt="Generic placeholder thumbnail">
+        <h4 style="color: aliceblue;">Appartments</h4>
+        <p style="color: aliceblue;" >
+          <table>
+            <th>
+              <p style="color: rgb(7, 7, 7);">Luxury Appartments</p>
+            </th>
+            <td>
+          <i class="fa fa-bed swing product-icon p-2">4</i>
+          <i class="fa fa-shower swing product-icon p-2">3</i>
+          <i class="fas fa-tape">93 sq m</i>
+        </p>
+      </td>
+      </table>
+    </div>
+      
+        
+        
+          
+        
+          
+          
+            
+              
+
+              
+
             
                
              
-          </div>
+          
         </div>
       </div>
     </div>
