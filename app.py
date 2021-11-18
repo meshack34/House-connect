@@ -22,6 +22,13 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(50), unique=True)
     password = db.Column(db.String(255))
 
+class Homes(UserMixin, db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    location = db.Column(db.String(15), unique=False)
+    number_of_rooms = db.Column(db.Integer(), unique=False)
+    amount = db.Column(db.Integer())
+
+
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
@@ -99,6 +106,13 @@ def about():
     
     return render_template('about.html')
 
+@app.route('/homes', methods=['GET'])
+def homes():
+    # cursor=db.execute('SELECT * FROM homes')
+    homes=Homes.query.all()
+    # homes=cursor.fetchall()
+    
+    return render_template('homes.html', homes=homes)
 
 
 
