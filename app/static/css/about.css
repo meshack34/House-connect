@@ -1,17 +1,17 @@
 #pic1 {
-  background-color: green;
+  background-color: rgb(240, 243, 240);
+  padding: 14px;
 }
 
 #pic2 {
-  background-color: green;
+  background-color: rgb(186, 202, 186);
   text-align: center;
-  padding: 10px;
-  margin: 0px;
+  padding-top: 20px;
 }
 
 img {
-  width: 200px;
-  height: 300px;
+  width: 700px;
+  height: 760px;
   object-fit: cover;
 }
 
